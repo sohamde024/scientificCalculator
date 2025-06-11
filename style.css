@@ -1,0 +1,105 @@
+/* Base styles */
+    body {
+      background-image: -webkit-repeating-radial-gradient(grey,lightblue);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .calculator {
+      background-color: rgba(48, 49, 52, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+
+    .display {
+      background-color: #171717;
+      color: #00ff90;
+      font-size: 2rem;
+      text-align: right;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      overflow-x: auto;
+      min-height: 60px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #444;
+      color: white;
+      transition: background 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+      transform: scale(1.05);
+    }
+
+    .scientific {
+      background-color: #333;
+    }
+
+    .operator {
+      background-color: #ff9500;
+    }
+
+    .operator:hover {
+      background-color: #ffaa33;
+    }
+
+    .equals {
+      background-color: #28a745;
+    }
+
+    .equals:hover {
+      background-color: #34ce57;
+    }
+
+    .clear {
+      background-color: #dc3545;
+    }
+
+    .clear:hover {
+      background-color: #e4606d;
+    }
+
+    /* Responsive tweaks for smaller devices */
+    @media (max-width: 480px) {
+      .calculator {
+        padding: 15px;
+      }
+
+      .display {
+        font-size: 1.5rem;
+        padding: 10px;
+      }
+
+      button {
+        padding: 12px;
+        font-size: 0.9rem;
+      }
+    }
